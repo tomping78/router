@@ -8,16 +8,16 @@ function Home(props) {
             <p>가장 먼저 보여지는 페이지입니다.</p>
             <ul>
                 <li>
-                <Link to="/about">소개</Link>
+                    <Link to="/about">소개</Link>
                 </li>
                 <li>
-                <Link to="/profiles/velopert">velopert의 프로필</Link>
+                    <Link to="/profiles/velopert">velopert의 프로필</Link>
                 </li>
                 <li>
-                <Link to="/profiles/gildong">gildong의 프로필</Link>
+                    <Link to="/profiles/gildong">gildong의 프로필</Link>
                 </li>
                 <li>
-                <Link to="/articles">게시글 목록</Link>
+                    <Link to="/articles">게시글 목록</Link>
                 </li>
             </ul>
         </div>
