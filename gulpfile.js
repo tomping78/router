@@ -26,3 +26,10 @@ gulp.task('less', function () {
         )
         .pipe(gulp.dest('./public'))
 })
+
+/*
+yarn add -D gulp gulp-less gulp-postcss gulp-debug gulp-csso autoprefixer less-plugin-npm-import
+npm i -D postcss
+npx gulp less
+yarn add react-css-theme-switcher
+*/
