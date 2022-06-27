@@ -5,6 +5,7 @@ const debug = require('gulp-debug')
 var csso = require('gulp-csso')
 const autoprefixer = require('autoprefixer')
 const NpmImportPlugin = require('less-plugin-npm-import')
+const { series } = require("gulp");
 
 gulp.task('less', function () {
     const plugins = [autoprefixer()]
@@ -26,6 +27,11 @@ gulp.task('less', function () {
         )
         .pipe(gulp.dest('./public'))
 })
+gulp.task('watch', function () {
+	gulp.watch('src/themes/*-theme.less', series(['less']));
+});
+
+gulp.task('default', series(['less','watch']));
 
 /*
 yarn add -D gulp gulp-less gulp-postcss gulp-debug gulp-csso autoprefixer less-plugin-npm-import
