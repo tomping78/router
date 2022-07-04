@@ -2,7 +2,7 @@ import React from "react";
 import './App.css';
 import { useThemeSwitcher } from "react-css-theme-switcher";
 import { Switch } from "antd";
-import {Route, Routes} from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home';
 import About from './Pages/About';
 import Profile from './Pages/Profile';

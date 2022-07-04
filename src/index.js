@@ -1,20 +1,23 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from '@/App';
 import { ThemeSwitcherProvider } from "react-css-theme-switcher";
 import { BrowserRouter } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
+import '../node_modules/antd/dist/antd.less';
+
+
 
 const themes = {
-  dark: `${process.env.PUBLIC_URL}/dark-theme.css`,
+  dark: '/dark-theme.css',
   light: `${process.env.PUBLIC_URL}/light-theme.css`,
 };
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ThemeSwitcherProvider themeMap={themes} defaultTheme="light" insertionPoint="styles-insertion-point">
+    <ThemeSwitcherProvider themeMap={themes} defaultTheme="light" insertionPoint={"styles-insertion-point"}>
       <BrowserRouter>
         <App />
       </BrowserRouter>
